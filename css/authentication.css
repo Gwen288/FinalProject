@@ -1,0 +1,147 @@
+/* Reset & global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(rgba(52, 152, 219, 0.6), rgba(46, 204, 113, 0.6)),
+                url('../images/green_waves.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Card container to hold logo and card */
+.card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo above the card */
+.card-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: -40px; /* Pulls logo slightly above the card */
+    object-fit: contain;
+    z-index: 10;
+}
+
+/* Login Card */
+.card {
+    width: 400px;
+    padding: 50px 25px 30px 25px; /* top padding increased to avoid overlap with logo */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+}
+
+/* Card Title */
+#layer {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Input wrapper for icons */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 8px 0 12px;
+}
+
+.input-wrapper svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    fill: #333;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 12px 10px 38px; /* left padding for icon */
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+}
+
+/* Checkbox */
+.Check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.Check input {
+    margin-right: 8px;
+}
+
+/* Login Button */
+#login-button {
+    width: 100%;
+    padding: 12px;
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 8px;
+    transition: 0.3s ease, transform 0.3s;
+}
+
+#login-button:hover {
+    background: #d35400;
+    transform: translateY(-3px);
+}
+
+/* Signup link */
+#paragraph {
+    margin-top: 12px;
+    color: #fff;
+    font-size: 14px;
+}
+
+#paragraph a {
+    color: #ffec99;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#paragraph a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
