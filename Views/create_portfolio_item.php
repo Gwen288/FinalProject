@@ -12,7 +12,7 @@ if (!$userId) {
 
 // Fetch the user's single portfolio
 $stmt = $conn->prepare(
-    "SELECT portfolio_id FROM portfolio WHERE user_id = ? LIMIT 1"
+    "SELECT portfolio_id FROM Portfolio WHERE user_id = ? LIMIT 1"
 );
 $stmt->bind_param("i", $userId);
 $stmt->execute();

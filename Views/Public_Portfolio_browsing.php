@@ -13,7 +13,7 @@ if (!$portfolioId) {
 /* Fetch portfolio */
 $stmt = $conn->prepare("
     SELECT p.portfolio_id, p.title, p.description, p.profile_image, p.user_id
-    FROM portfolio p
+    FROM Portfolio p
     WHERE p.portfolio_id = ? AND p.visibility = 'public'
     LIMIT 1
 ");
@@ -29,7 +29,7 @@ if (!$portfolio) {
 /* Fetch items */
 $itemStmt = $conn->prepare("
     SELECT *
-    FROM portfolio_item
+    FROM Portfolio_Item
     WHERE portfolio_id = ?
     ORDER BY item_type, start_date DESC, date_received DESC
 ");
@@ -86,7 +86,7 @@ body { font-family:Segoe UI,Tahoma; background:#f7fafc; color:#1a202c; margin:0;
     <li><a href="Portfolio_browsing_page.php">Explore</a></li>
     <?php if ($userId) { ?>
         <?php
-            $checkPortfolio = $conn->prepare("SELECT portfolio_id FROM portfolio WHERE user_id=? LIMIT 1");
+            $checkPortfolio = $conn->prepare("SELECT portfolio_id FROM Portfolio WHERE user_id=? LIMIT 1");
             $checkPortfolio->bind_param("i", $userId);
             $checkPortfolio->execute();
             $res = $checkPortfolio->get_result();

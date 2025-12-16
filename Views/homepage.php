@@ -7,7 +7,7 @@ $hasPortfolio = false;
 $portfolioId = null;
 
 if ($userId) {
-    $stmt = $conn->prepare("SELECT portfolio_id FROM portfolio WHERE user_id = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT portfolio_id FROM Portfolio WHERE user_id = ? LIMIT 1");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
     $result = $stmt->get_result()->fetch_assoc();

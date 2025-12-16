@@ -11,8 +11,8 @@ if (!$userId) {
 // Fetch portfolio
 $stmt = $conn->prepare("
     SELECT p.*, c.category_name
-    FROM portfolio p
-    LEFT JOIN category c ON p.category_id = c.category_id
+    FROM Portfolio p
+    LEFT JOIN Category c ON p.category_id = c.category_id
     WHERE p.user_id = ?
     LIMIT 1
 ");

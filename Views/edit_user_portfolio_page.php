@@ -9,7 +9,7 @@ if (!$userId) {
 }
 
 // Fetch portfolio
-$stmt = $conn->prepare("SELECT * FROM portfolio WHERE user_id=? LIMIT 1");
+$stmt = $conn->prepare("SELECT * FROM Portfolio WHERE user_id=? LIMIT 1");
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $portfolio = $stmt->get_result()->fetch_assoc();
@@ -20,7 +20,7 @@ if (!$portfolio) {
 }
 
 // Fetch categories for dropdown
-$catQuery = $conn->query("SELECT category_id, category_name FROM category ORDER BY category_name");
+$catQuery = $conn->query("SELECT category_id, category_name FROM Category ORDER BY category_name");
 $categories = [];
 while ($row = $catQuery->fetch_assoc()) {
     $categories[] = $row;

@@ -9,20 +9,20 @@ if (!$userId) {
 }
 
 // Fetch profile info
-$stmt = $conn->prepare("SELECT * FROM student_profile WHERE user_id=?");
+$stmt = $conn->prepare("SELECT * FROM Student_Profile WHERE user_id=?");
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result()->fetch_assoc();
 
 // Auto-create profile if it doesn't exist
 if (!$result) {
-    $stmtUser = $conn->prepare("SELECT email FROM portfoliohub_users WHERE user_id = ?");
+    $stmtUser = $conn->prepare("SELECT email FROM Portfoliohub_Users WHERE user_id = ?");
     $stmtUser->bind_param("i", $userId);
     $stmtUser->execute();
     $userResult = $stmtUser->get_result()->fetch_assoc();
     $email = $userResult['email'] ?? '';
 
-    $insert = $conn->prepare("INSERT INTO student_profile (user_id, email, bio, major, year, profile_picture) VALUES (?, ?, '', '', '', 'default.png')");
+    $insert = $conn->prepare("INSERT INTO Student_Profile (user_id, email, bio, major, year, profile_picture) VALUES (?, ?, '', '', '', 'default.png')");
     $insert->bind_param("is", $userId, $email);
     $insert->execute();
 

@@ -10,7 +10,7 @@ if (!$userId) {
 }
 
 // Prevent duplicate portfolios
-$checkStmt = $conn->prepare("SELECT portfolio_id FROM portfolio WHERE user_id = ? LIMIT 1");
+$checkStmt = $conn->prepare("SELECT portfolio_id FROM Portfolio WHERE user_id = ? LIMIT 1");
 $checkStmt->bind_param("i", $userId);
 $checkStmt->execute();
 $existing = $checkStmt->get_result()->fetch_assoc();

@@ -6,7 +6,7 @@ require_once '../php/db_connect.php';
    FETCH CATEGORIES
 ===================== */
 $categories = [];
-$catQuery = $conn->query("SELECT category_id, category_name FROM category ORDER BY category_name");
+$catQuery = $conn->query("SELECT category_id, category_name FROM Category ORDER BY category_name");
 while ($row = $catQuery->fetch_assoc()) {
     $categories[] = $row;
 }
@@ -27,8 +27,8 @@ $sql = "SELECT
           p.profile_image,
           p.user_id,
           c.category_name
-        FROM portfolio p
-        JOIN category c 
+        FROM Portfolio p
+        JOIN Category c 
           ON p.category_id = c.category_id
         WHERE p.visibility = 'public'";
 
@@ -68,7 +68,7 @@ $hasPortfolio = false;
 $portfolioId = null;
 
 if ($userId) {
-    $stmtUser = $conn->prepare("SELECT portfolio_id FROM portfolio WHERE user_id=? LIMIT 1");
+    $stmtUser = $conn->prepare("SELECT portfolio_id FROM Portfolio WHERE user_id=? LIMIT 1");
     $stmtUser->bind_param("i", $userId);
     $stmtUser->execute();
     $res = $stmtUser->get_result();

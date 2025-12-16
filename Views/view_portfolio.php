@@ -15,7 +15,7 @@ $viewMode = $_GET['view'] ?? 'cards';
 ====================== */
 $stmt = $conn->prepare("
     SELECT portfolio_id, title, `description`
-    FROM portfolio
+    FROM Portfolio
     WHERE user_id = ?
     LIMIT 1
 ");
@@ -35,7 +35,7 @@ $portfolioId = $portfolio['portfolio_id'];
 ====================== */
 $itemStmt = $conn->prepare("
     SELECT *
-    FROM portfolio_item
+    FROM Portfolio_Item
     WHERE portfolio_id = ?
     ORDER BY item_type, start_date DESC, date_received DESC
 ");
