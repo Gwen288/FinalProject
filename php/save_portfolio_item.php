@@ -36,7 +36,7 @@ if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] === UPLOAD_ER
 }
 
 // Insert portfolio item into database
-$stmt = $conn->prepare("INSERT INTO portfolio_item 
+$stmt = $conn->prepare("INSERT INTO Portfolio_Item 
     (portfolio_id, item_type, title, `description`, `location`, `role`, `start_date`, end_date, date_received, attachment)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param(

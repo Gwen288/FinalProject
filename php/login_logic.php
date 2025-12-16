@@ -30,7 +30,7 @@ if ($conn->connect_error) {
 }
 
 //selecting userid,firstname,lastname and password from database
-$stmt = $conn->prepare("SELECT user_id,first_name, last_name, `password`,`role` FROM portfolioHub_users WHERE TRIM(email)=?");
+$stmt = $conn->prepare("SELECT user_id,first_name, last_name, `password`,`role` FROM PortfolioHub_Users WHERE TRIM(email)=?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 

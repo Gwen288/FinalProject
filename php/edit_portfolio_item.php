@@ -26,8 +26,8 @@ if (!$itemId) {
 // Fetch item to ensure it belongs to the user
 $stmt = $conn->prepare("
     SELECT pi.* 
-    FROM portfolio_item pi
-    JOIN portfolio p ON pi.portfolio_id = p.portfolio_id
+    FROM Portfolio_Item pi
+    JOIN Portfolio p ON pi.portfolio_id = p.portfolio_id
     WHERE pi.item_id = ? AND p.user_id = ?
 ");
 $stmt->bind_param("ii", $itemId, $userId);
@@ -67,7 +67,7 @@ if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] === UPLOAD_ER
 
 // Update database
 $updateStmt = $conn->prepare("
-    UPDATE portfolio_item 
+    UPDATE Portfolio_Item 
     SET title=?, description=?, location=?, role=?, start_date=?, end_date=?, date_received=?, attachment=? 
     WHERE item_id=?
 ");

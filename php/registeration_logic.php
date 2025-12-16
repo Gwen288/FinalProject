@@ -37,7 +37,7 @@ if ($conn->connect_error) {
 }
 
 // Prepare and execute insert query
-$stmt = $conn->prepare("INSERT INTO portfolioHub_users (first_name, last_name,email, `password`) VALUES (?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO PortfolioHub_Users (first_name, last_name,email, `password`) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $firstname, $lastname, $email, $h_password);
 
 if ($stmt->execute()) {

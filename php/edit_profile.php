@@ -41,10 +41,10 @@ if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] ===
 
 // Update database
 if ($profilePictureName) {
-    $stmt = $conn->prepare("UPDATE student_profile SET email=?, bio=?, major=?, year=?, profile_picture=? WHERE user_id=?");
+    $stmt = $conn->prepare("UPDATE Student_Profile SET email=?, bio=?, major=?, year=?, profile_picture=? WHERE user_id=?");
     $stmt->bind_param("sssssi", $email, $bio, $major, $year, $profilePictureName, $userId);
 } else {
-    $stmt = $conn->prepare("UPDATE student_profile SET email=?, bio=?, major=?, year=? WHERE user_id=?");
+    $stmt = $conn->prepare("UPDATE Student_Profile SET email=?, bio=?, major=?, year=? WHERE user_id=?");
     $stmt->bind_param("ssssi", $email, $bio, $major, $year, $userId);
 }
 

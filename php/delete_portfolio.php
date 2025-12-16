@@ -13,15 +13,15 @@ if (!$userId || !$portfolioId) {
 
 // Delete portfolio items first
 $stmt = $conn->prepare("
-    DELETE pi FROM portfolio_item pi
-    INNER JOIN portfolio p ON pi.portfolio_id = p.portfolio_id
+    DELETE pi FROM Portfolio_Item pi
+    INNER JOIN Portfolio p ON pi.portfolio_id = p.portfolio_id
     WHERE pi.portfolio_id=? AND p.user_id=?
 ");
 $stmt->bind_param("ii", $portfolioId, $userId);
 $stmt->execute();
 
 // Delete portfolio
-$stmt = $conn->prepare("DELETE FROM portfolio WHERE portfolio_id=? AND user_id=?");
+$stmt = $conn->prepare("DELETE FROM Portfolio WHERE portfolio_id=? AND user_id=?");
 $stmt->bind_param("ii", $portfolioId, $userId);
 $success = $stmt->execute();
 

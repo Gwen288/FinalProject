@@ -11,7 +11,7 @@ if (!$userId) {
 }
 
 // Check if student already has a portfolio
-$checkStmt = $conn->prepare("SELECT portfolio_id FROM portfolio WHERE user_id = ? LIMIT 1");
+$checkStmt = $conn->prepare("SELECT portfolio_id FROM Portfolio WHERE user_id = ? LIMIT 1");
 $checkStmt->bind_param("i", $userId);
 $checkStmt->execute();
 if ($checkStmt->get_result()->num_rows > 0) {
@@ -51,7 +51,7 @@ if (isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] === 0) 
 
 // Insert portfolio into database
 $stmt = $conn->prepare("
-    INSERT INTO portfolio (user_id, category_id, profile_image, title, description, visibility, status, created_at, updated_at)
+    INSERT INTO Portfolio (user_id, category_id, profile_image, title, description, visibility, status, created_at, updated_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())
 ");
 $stmt->bind_param(

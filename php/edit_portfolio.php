@@ -43,7 +43,7 @@ $params[] = $portfolioId;
 $params[] = $userId;
 $types .= "ii";
 
-$sql = "UPDATE portfolio SET $fields WHERE portfolio_id=? AND user_id=?";
+$sql = "UPDATE Portfolio SET $fields WHERE portfolio_id=? AND user_id=?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param($types, ...$params);

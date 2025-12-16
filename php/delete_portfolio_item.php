@@ -14,8 +14,8 @@ if (!$itemId) {
 
 // Optional: verify ownership
 $userId = $_SESSION['user_id'] ?? null;
-$stmt = $conn->prepare("DELETE pi FROM portfolio_item pi
-                        JOIN portfolio p ON pi.portfolio_id = p.portfolio_id
+$stmt = $conn->prepare("DELETE pi FROM Portfolio_Item pi
+                        JOIN Portfolio p ON pi.portfolio_id = p.portfolio_id
                         WHERE pi.item_id = ? AND p.user_id = ?");
 $stmt->bind_param("ii", $itemId, $userId);
 

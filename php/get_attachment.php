@@ -10,7 +10,7 @@ if (!$itemId || !is_numeric($itemId)) {
 
 $stmt = $conn->prepare("
     SELECT attachment
-    FROM portfolio_item
+    FROM Portfolio_Item
     WHERE item_id = ?
     LIMIT 1
 ");
