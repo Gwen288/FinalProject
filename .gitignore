@@ -1,1 +1,5 @@
 *.env
+# Ignore uploaded files
+uploads/*
+!uploads/profiles/.gitkeep
+!uploads/portfolio_items/.gitkeep
