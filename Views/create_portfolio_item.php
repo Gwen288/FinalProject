@@ -27,7 +27,7 @@ if (!$portfolio) {
 $portfolioId = $portfolio['portfolio_id'];
 
 // Fetch enum values for item_type from database
-$enumQuery = $conn->query("SHOW COLUMNS FROM portfolio_item LIKE 'item_type'");
+$enumQuery = $conn->query("SHOW COLUMNS FROM Portfolio_Item LIKE 'item_type'");
 $row = $enumQuery->fetch_assoc();
 $enumValues = [];
 if ($row) {

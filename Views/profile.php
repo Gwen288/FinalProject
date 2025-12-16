@@ -22,7 +22,7 @@ if (!$result) {
     $userResult = $stmtUser->get_result()->fetch_assoc();
     $email = $userResult['email'] ?? '';
 
-    $insert = $conn->prepare("INSERT INTO Student_Profile (user_id, email, bio, major, year, profile_picture) VALUES (?, ?, '', '', '', 'default.png')");
+    $insert = $conn->prepare("INSERT INTO Student_Profile (user_id, email, bio, major, `year`, profile_picture) VALUES (?, ?, '', '', '', 'default.png')");
     $insert->bind_param("is", $userId, $email);
     $insert->execute();
 
