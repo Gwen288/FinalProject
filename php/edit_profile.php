@@ -13,7 +13,8 @@ if (!$userId) {
 $email = trim($_POST['email'] ?? '');
 $bio   = trim($_POST['bio'] ?? '');
 $major = trim($_POST['major'] ?? '');
-$year  = trim($_POST['year'] ?? '');
+$year = empty($_POST['year']) ? null : (int) $_POST['year'];
+
 
 // Validate email
 if (!$email) {
