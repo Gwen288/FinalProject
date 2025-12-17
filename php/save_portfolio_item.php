@@ -20,9 +20,10 @@ $title = $_POST['title'] ?? '';
 $description = $_POST['description'] ?? '';
 $location = $_POST['location'] ?? '';
 $role = $_POST['role'] ?? '';
-$start_date = $_POST['start_date'] ?? null;
-$end_date = $_POST['end_date'] ?? null;
-$date_received = $_POST['date_received'] ?? null;
+$start_date = empty($_POST['start_date']) ? null : $_POST['start_date'];
+$end_date = empty($_POST['end_date']) ? null : $_POST['end_date'];
+$date_received = empty($_POST['date_received']) ? null : $_POST['date_received'];
+
 
 $attachment = null;
 
