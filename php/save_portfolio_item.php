@@ -40,7 +40,7 @@ $stmt = $conn->prepare("INSERT INTO Portfolio_Item
     (portfolio_id, item_type, title, `description`, `location`, `role`, `start_date`, end_date, date_received, attachment)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param(
-    "issssssssss",
+    "isssssssss",
     $portfolio_id, $item_type, $title, $description, $location, $role, $start_date, $end_date, $date_received, $attachment
 );
 
