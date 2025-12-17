@@ -6,7 +6,7 @@ PortfolioHub is a web application that allows students to create, manage, and sh
 - **Account creation**: View and manage your profile
 - **Explore Portfolios**: View all available portfolios
 - **Portfolio Creation**: Create a personalized portfolio 
-- **Portfolio Management**: Update created portfolios. Addition functionality to either make your portfolio public or private to other students
+- **Portfolio Management**: Update created portfolios. Added functionality to either make your portfolio public or private to other students
 - **Responsive Design**: Modern, mobile-friendly interface
 
 ## Technology Stack
