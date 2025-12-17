@@ -16,7 +16,7 @@ $result = $stmt->get_result()->fetch_assoc();
 
 // Auto-create profile if it doesn't exist
 if (!$result) {
-    $stmtUser = $conn->prepare("SELECT email FROM Portfoliohub_Users WHERE user_id = ?");
+    $stmtUser = $conn->prepare("SELECT email FROM PortfolioHub_Users WHERE user_id = ?");
     $stmtUser->bind_param("i", $userId);
     $stmtUser->execute();
     $userResult = $stmtUser->get_result()->fetch_assoc();
