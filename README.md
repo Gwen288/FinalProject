@@ -1,4 +1,4 @@
-# Final Project - PortfolioHub Web App
+# Final Project - PortfolioHub 
 PortfolioHub is a web application that allows students to create, manage, and showcase their portfolios. Users can upload projects, update their profiles, and explore other students’ portfolios.
 
 ## Features
