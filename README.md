@@ -23,7 +23,7 @@ PortfolioHub is a web application that allows students to create, manage, and sh
 ## Future Enhancements
 - Admin View and Functionality
 - Enhanced Search functionality using Ajax
-- Enabled downloading versions of portfolios
+- Enable downloading versions of portfolios
 - Multiple Portfolio Creation by a student
 - Admin dashboard with analytics
 
