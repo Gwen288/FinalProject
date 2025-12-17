@@ -1,6 +1,9 @@
 # Final Project - PortfolioHub 
 PortfolioHub is a web application that allows students to create, manage, and showcase their portfolios. Users can upload projects, update their profiles, and explore other students’ portfolios.
 
+##  PortfolioHub link 
+Live Site : http://169.239.251.102:341/~wendy.dwumfuor/Final_Project/FinalProject/
+
 ## Features
 ### Customer Features
 - **Account creation**: View and manage your profile
