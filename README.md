@@ -1,2 +1,29 @@
-# FinalProject
-A Student Portfolio web system that allows students to create and manage their portfolio. 
+# Final Project - PortfolioHub Web App
+PortfolioHub is a web application that allows students to create, manage, and showcase their portfolios. Users can upload projects, update their profiles, and explore other students’ portfolios.
+
+## Features
+### Customer Features
+- **Account creation**: View and manage your profile
+- **Explore Portfolios**: View all available portfolios
+- **Portfolio Creation**: Create a personalized portfolio 
+- **Portfolio Management**: Update created portfolios. Addition functionality to either make your portfolio public or private to other students
+- **Responsive Design**: Modern, mobile-friendly interface
+
+## Technology Stack
+
+- **Backend**: PHP (MySQLi)
+- **Database**: MySQL
+- **Frontend**: HTML5, CSS3, JavaScript
+  
+## Security Features
+- Session-based authentication
+- Prepared statements for SQL queries (prevents SQL injection)
+- JavaScript validations
+  
+## Future Enhancements
+- Admin View and Functionality
+- Enhanced Search functionality using Ajax
+- Enabled downloading versions of portfolios
+- Multiple Portfolio Creation by a student
+- Admin dashboard with analytics
+
