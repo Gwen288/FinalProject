@@ -5,10 +5,8 @@ PortfolioHub is a web application that allows students to create, manage, and sh
 Live Site: http://169.239.251.102:341/~wendy.dwumfuor/Final_Project/FinalProject/
 ## SQL Files
 All supporting SQL files can be found in the SQL folder:
-PortfolioHub SQL file
-Final project.draw.io ( the err diagram)
-
-
+- PortfolioHub SQL file
+- Final project.draw.io ( the err diagram)
 ## Features
 ### Customer Features
 - **Account creation**: View and manage your profile
