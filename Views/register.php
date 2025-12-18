@@ -35,7 +35,9 @@
 
                 <!-- Email -->
                 <div class="input-wrapper">
-                    <span>@</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 24 24">
+                        <path d="M12 12.713l11.985-9.713H0L12 12.713zm0 2.574L0 5.999v12.002h24V5.999L12 15.287z"/>
+                    </svg>
                     <input type="email" name="email" placeholder="Email" id='email-input' required>
                 </div>
 
