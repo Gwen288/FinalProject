@@ -84,7 +84,7 @@ if (!empty($_FILES['attachment']) && $_FILES['attachment']['error'] === UPLOAD_E
         exit;
     }
 
-    $uploadDir = "../uploads/";
+    $uploadDir = "../uploads/portfolio_items/";
     if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
 
     $newFileName = uniqid() . "_" . basename($fileName);

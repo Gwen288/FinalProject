@@ -26,7 +26,7 @@ if (!$result || empty($result['attachment'])) {
     die("Attachment not found.");
 }
 
-$filePath = "../uploads/" . $result['attachment'];
+$filePath = "../uploads/portfolio_items/" . $result['attachment'];
 
 if (!file_exists($filePath)) {
     die("File does not exist.");
