@@ -104,7 +104,7 @@ body {
 }
 
 /* Login Button */
-#login-button {
+#login-button,#register-button {
     width: 100%;
     padding: 12px;
     background: #e67e22;
@@ -118,7 +118,7 @@ body {
     transition: 0.3s ease, transform 0.3s;
 }
 
-#login-button:hover {
+#login-button:hover,#register-button:hover {
     background: #d35400;
     transform: translateY(-3px);
 }

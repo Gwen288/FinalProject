@@ -64,7 +64,7 @@ if ($userId) {
                     <a href="create_portfolio.php" class="btn create">Create Your Portfolio</a>
                 <?php endif; ?>
             <?php else: ?>
-                <a href="login.php" class="btn create">Get Started</a>
+                <a href="register.php" class="btn create">Get Started</a>
             <?php endif; ?>
         </div>
     </div>

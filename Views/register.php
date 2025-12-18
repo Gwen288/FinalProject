@@ -17,19 +17,21 @@
             <form id="signup_form" class="myform">
                 <!-- First Name -->
                 <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 24 24">
-                        <path d="M12 12.713l11.985-9.713H0L12 12.713zm0 2.574L0 5.999v12.002h24V5.999L12 15.287z"/>
-                    </svg>
-                    <input type="text" name="first_name" placeholder="First Name" id='firstname-input' required>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#333">
+                     <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/>
+                     </svg>
+                    <input type="text" name="first_name" placeholder="First Name" id="firstname-input" required>
                 </div>
+
 
                 <!-- Last Name -->
                 <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#333" viewBox="0 0 24 24">
-                        <path d="M12 12.713l11.985-9.713H0L12 12.713zm0 2.574L0 5.999v12.002h24V5.999L12 15.287z"/>
-                    </svg>
-                    <input type="text" name="last_name" placeholder="Last Name" id='lastname-input' required>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#333">
+                    <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/>
+                     </svg>
+                    <input type="text" name="last_name" placeholder="Last Name" id="lastname-input" required>
                 </div>
+
 
                 <!-- Email -->
                 <div class="input-wrapper">
@@ -54,7 +56,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" id="myButton" onclick="Validate(event)">Sign Up</button>
+                <button type="submit" id="register-button" onclick="Validate(event)">Sign Up</button>
             </form>
 
             <!-- Login Link -->
