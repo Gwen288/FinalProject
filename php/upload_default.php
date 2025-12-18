@@ -1,6 +1,6 @@
 <?php
 // upload_default.php
-$uploadDir = __DIR__ . "/uploads/portfolios/";
+$uploadDir = __DIR__ . "/../uploads/portfolios/";
 
 // Make sure the folder exists
 if (!is_dir($uploadDir)) {
