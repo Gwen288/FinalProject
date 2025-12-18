@@ -235,7 +235,7 @@ body { background: var(--bg); color: var(--dark); }
     <!-- Card Media -->
     <div class="card-media">
         <?php
-        $imgPath = "../uploads/" . $item['attachment'];
+        $imgPath = "../uploads/portfolio_items" . $item['attachment'];
         if (!empty($item['attachment']) && file_exists($imgPath)):
         ?>
             <img src="<?= htmlspecialchars($imgPath) ?>" alt="<?= htmlspecialchars($item['title']) ?>">

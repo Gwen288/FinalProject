@@ -41,7 +41,7 @@ if (isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] === 0) 
     $ext = strtolower(pathinfo($_FILES['profile_image']['name'], PATHINFO_EXTENSION));
     if (in_array($ext, $allowed)) {
         $newName = 'profile_' . $userId . '_' . time() . '.' . $ext;
-        $uploadDir = '../uploads/profiles/';
+        $uploadDir = '../uploads/portfolios/';
         if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
         if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $uploadDir.$newName)) {
             $profile_image = $newName;

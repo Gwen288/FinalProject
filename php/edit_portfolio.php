@@ -18,7 +18,7 @@ $categoryId = $_POST['category_id'] ?? null;
 // Handle profile image if uploaded
 $profileImage = null;
 if (isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] === UPLOAD_ERR_OK) {
-    $uploadDir = '../uploads/';
+    $uploadDir = '../uploads/portfolios';
     $tmpName = $_FILES['profile_image']['tmp_name'];
     $filename = uniqid() . '_' . basename($_FILES['profile_image']['name']);
     $destination = $uploadDir . $filename;

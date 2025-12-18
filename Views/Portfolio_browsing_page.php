@@ -221,7 +221,7 @@ if ($userId) {
 
     <div class="portfolio-image">
       <?php
-        $imagePath = "../uploads/profiles/" . $row['profile_image'];
+        $imagePath = "../uploads/portfolios/" . $row['profile_image'];
 
      if (!empty($row['profile_image']) && file_exists($imagePath)):
       ?>
