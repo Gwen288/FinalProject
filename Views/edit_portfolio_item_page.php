@@ -107,7 +107,7 @@ $portfolioId = $item['portfolio_id'];
   <h1><?= htmlspecialchars($item['item_type']) ?></h1>
   <p class="subtitle">Update details of this project, experience, or achievement</p>
 
-  <form id="editForm" action="../php/edit_portfolio_item.php" method="POST" enctype="multipart/form-data">
+  <form id="editForm" enctype="multipart/form-data">
     <input type="hidden" name="item_id" value="<?= $item['item_id'] ?>">
     <input type="hidden" name="portfolio_id" value="<?= $portfolioId ?>">
 
