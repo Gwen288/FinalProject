@@ -227,7 +227,7 @@ if ($userId) {
       ?>
         <img src="<?= $imagePath ?>" alt="<?= htmlspecialchars($row['title']) ?>">
       <?php else: ?>
-        <img src="../uploads/profiles/default1.png" alt="Default profile image">
+        <img src="../uploads/portfolios/default.jpg" alt="Default profile image">
       <?php endif; ?>
     </div>
 
