@@ -28,7 +28,6 @@ if (strpos($contentType, 'application/json') !== false) {
     $input = $_POST;
 }
 
-
 /* ===============================
    INPUT DATA
 ================================ */
@@ -55,7 +54,6 @@ $checkStmt = $conn->prepare("
     JOIN Portfolio p ON pi.portfolio_id = p.portfolio_id
     WHERE pi.item_id = ? AND p.user_id = ?
 ");
-
 if (!$checkStmt) {
     echo json_encode(['success' => false, 'message' => $conn->error]);
     exit;
@@ -87,12 +85,9 @@ if (!empty($_FILES['attachment']) && $_FILES['attachment']['error'] === UPLOAD_E
     }
 
     $uploadDir = "../uploads/";
-    if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0755, true);
-    }
+    if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
 
     $newFileName = uniqid() . "_" . basename($fileName);
-
     if (!move_uploaded_file($fileTmp, $uploadDir . $newFileName)) {
         echo json_encode(['success' => false, 'message' => 'File upload failed']);
         exit;
@@ -102,12 +97,18 @@ if (!empty($_FILES['attachment']) && $_FILES['attachment']['error'] === UPLOAD_E
 }
 
 /* ===============================
-   UPDATE DATABASE
+   UPDATE DATABASE (nullable dates via NULLIF)
 ================================ */
 $updateStmt = $conn->prepare("
     UPDATE Portfolio_Item
-    SET title=?, description=?, location=?, role=?,
-        start_date=?, end_date=?, date_received=?, attachment=?
+    SET title=?, 
+        description=?, 
+        location=?, 
+        role=?,
+        start_date=NULLIF(?, ''),
+        end_date=NULLIF(?, ''),
+        date_received=NULLIF(?, ''),
+        attachment=?
     WHERE item_id=?
 ");
 
@@ -141,3 +142,4 @@ if ($updateStmt->execute()) {
         'message' => $updateStmt->error
     ]);
 }
+?>
